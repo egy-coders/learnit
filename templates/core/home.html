@@ -1,0 +1,167 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block title %} {{page_title}} {% endblock %}
+{% block content %}
+<!-- Slider One -->
+<section class="slider-one">
+    <div class="main-slider swiper-container">
+        <div class="swiper-wrapper">
+
+            <!-- Slide -->
+            <div class="swiper-slide">
+                <div class="slider-one_image-layer"
+                    style="background-image:url({% static 'assets/images/main-slider/1.jpg' %})"></div>
+                <div class="slider-one_pattern"
+                    style="background-image:url({% static 'assets/images/main-slider/vector-1.png' %})"></div>
+                <div class="auto-container">
+                    <!-- Content Column -->
+                    <div class="slider-one_content">
+                        <div class="slider-one_content-inner">
+                            <div class="slider-one_title">your gateway to IT Excellence</div>
+                            <h1 class="slider-one_heading">Empowering <span>Learners</span> with Industry-Relevant IT Skills</h1>
+                            <div class="slider-one_button d-flex align-items-center flex-wrap">
+                                <a href="about.html" class="theme-btn btn-style-two">
+                                    <span class="btn-wrap">
+                                        <span class="text-one">Work With Us</span>
+                                        <span class="text-two">Work With Us</span>
+                                    </span>
+                                </a>
+                                <div class="slider-one_video">
+                                    <a href="https://www.youtube.com/watch?v=kxPCFljwJws"
+                                        class="lightbox-video play-box"><span class="fa fa-play"></span></a>
+                                </div>
+                            </div>
+                            <div class="slider-one_arrow"
+                                style="background-image:url({% static 'assets/images/main-slider/vector-2.png' %})">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide -->
+            <div class="swiper-slide">
+                <div class="slider-one_image-layer"
+                    style="background-image:url({% static 'assets/images/main-slider/2.jpg' %})"></div>
+                <div class="slider-one_pattern"
+                    style="background-image:url({% static 'assets/images/main-slider/vector-1.png' %})"></div>
+                <div class="auto-container">
+                    <!-- Content Column -->
+                    <div class="slider-one_content">
+                        <div class="slider-one_content-inner">
+                            <div class="slider-one_title">your gateway to IT Excellence</div>
+                            <h1 class="slider-one_heading">Empowering <span>Learners</span> with Industry-Relevant IT Skills</h1>
+                            <div class="slider-one_button d-flex align-items-center flex-wrap">
+                                <a href="about.html" class="theme-btn btn-style-two">
+                                    <span class="btn-wrap">
+                                        <span class="text-one">Work With Us</span>
+                                        <span class="text-two">Work With Us</span>
+                                    </span>
+                                </a>
+                                <div class="slider-one_video">
+                                    <a href="https://www.youtube.com/watch?v=kxPCFljwJws"
+                                        class="lightbox-video play-box"><span class="fa fa-play"></span></a>
+                                </div>
+                            </div>
+                            <div class="slider-one_arrow"
+                                style="background-image:url({% static 'assets/images/main-slider/vector-2.png' %})">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide -->
+            <div class="swiper-slide">
+                <div class="slider-one_image-layer"
+                    style="background-image:url({% static 'assets/images/main-slider/3.jpg' %})"></div>
+                <div class="slider-one_pattern"
+                    style="background-image:url({% static 'assets/images/main-slider/vector-1.png' %})"></div>
+                <div class="auto-container">
+                    <!-- Content Column -->
+                    <div class="slider-one_content">
+                        <div class="slider-one_content-inner">
+                            <div class="slider-one_title">your gateway to IT Excellence</div>
+                            <h1 class="slider-one_heading">Empowering <span>Learners</span> with Industry-Relevant IT Skills</h1>
+                            <div class="slider-one_button d-flex align-items-center flex-wrap">
+                                <a href="about.html" class="theme-btn btn-style-two">
+                                    <span class="btn-wrap">
+                                        <span class="text-one">Work With Us</span>
+                                        <span class="text-two">Work With Us</span>
+                                    </span>
+                                </a>
+                                <div class="slider-one_video">
+                                    <a href="https://www.youtube.com/watch?v=kxPCFljwJws"
+                                        class="lightbox-video play-box"><span class="fa fa-play"></span></a>
+                                </div>
+                            </div>
+                            <div class="slider-one_arrow"
+                                style="background-image:url({% static 'assets/images/main-slider/vector-2.png' %})">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="slider-one_pagination"></div>
+
+    </div>
+    <!-- Slider One Socials -->
+    <div class="slider-one_socials">
+        <a href="#">facebook</a>
+        <a href="#">instagram</a>
+        <a href="#">twitter</a>
+    </div>
+
+    <!-- Slider One Options -->
+    <div class="slider-one_options">
+        <div class="button">
+            <a class="service-btn" href="service.html">More Services <i class="fa-arrow-right"></i></a>
+        </div>
+        <div class="slider-one_authors">
+            <ul>
+                <li><img src="{% static 'assets/images/main-slider/author-1.png' %}" alt="" /></li>
+                <li><img src="{% static 'assets/images/main-slider/author-2.png' %}" alt="" /></li>
+                <li><img src="{% static 'assets/images/main-slider/author-3.png' %}" alt="" /></li>
+                <li><img src="{% static 'assets/images/main-slider/author-4.png' %}" alt="" /></li>
+            </ul>
+            <div class="slider-one_reviews">
+                25k+ <br> <span>Clients Review</span>
+            </div>
+        </div>
+    </div>
+    <!-- End Slider One Options -->
+
+</section>
+<!-- End Main Slider Section -->
+
+
+{% include 'layout/partials/_client.html' %}
+
+{% include 'layout/partials/_about.html' %}
+
+{% include 'layout/partials/_marketing.html' %}
+
+{% include 'layout/partials/_achieve.html' %}
+
+{% include 'layout/partials/_video.html' %}
+
+{% include 'layout/partials/_process.html' %}
+
+{% include 'layout/partials/_program.html' %}
+
+{% include 'layout/partials/_testmonials.html' %}
+
+{% include 'layout/partials/_team.html' %}
+
+{% include 'layout/partials/_incredible.html' %}
+
+{% include 'layout/partials/_experiance.html' %}
+
+{% include 'layout/partials/_news.html' %}
+
+{% endblock %}

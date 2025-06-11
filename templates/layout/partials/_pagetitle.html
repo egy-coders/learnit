@@ -1,0 +1,18 @@
+{% load static %}
+<!-- Page Title -->
+<section class="page-title">
+    <div class="page-title_big-title">{{page_title}}</div>
+    <div class="page-title_bg-image" style="background-image:url({% static 'assets/images/background/3.jpg' %})"></div>
+    <div class="page-title_shape-one"
+        style="background-image:url({% static 'assets/images/background/page-title-1.png' %})"></div>
+    <div class="page-title_shape-two"
+        style="background-image:url({% static 'assets/images/background/page-title-2.png' %})"></div>
+    <div class="auto-container">
+        <h1>{{page_title}}</h1>
+        <ul class="bread-crumb clearfix">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li>{{page_title}}</li>
+        </ul>
+    </div>
+</section>
+<!-- End Page Title -->

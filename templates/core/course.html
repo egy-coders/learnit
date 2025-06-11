@@ -1,0 +1,179 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %} {{page_title}} {% endblock %}
+
+{% block content %}
+{% include 'layout/partials/_pagetitle.html' %}
+<!-- Project Detail -->
+<section class="project-detail">
+    <div class="auto-container">
+        <!-- Sec Title -->
+        <div class="sec-title">
+            <div class="sec-title_title">
+                {{course.category}}
+                <div class="sec-title_dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <h2 class="sec-title_heading">{{course.title}}</h2>
+            <div class="sec-title_text">
+                {{course.description}}
+            </div>
+        </div>
+        <div class="inner-container">
+            <div class="project-detail_image">
+                {% if course.thumbnail %}
+                <img src="{{course.thumbnail.url}}" alt="" />
+                {% else %}
+                <img src="{% static 'assets/images/resource/project-1.jpg' %}" alt="" />
+                {% endif %}
+            </div>
+            <ul class="project-detail_info">
+                <li>Platform:<span>{{course.platform}}</span></li>
+                <li>Category:<span>{{course.category}}</span></li>
+                <li>Level:<span>{{course.level|capfirst}}</span></li>
+                <li>Status:<span>100% Satisfied</span></li>
+                <li>Duration:<span>{{course.duration}}</span></li>
+                <li>Starts in:<span>{{course.countdown_date}}</span></li>
+            </ul>
+
+            <!-- Sec Title -->
+            <div class="sec-title">
+                <div class="sec-title_title">
+                    Working Process
+                    <div class="sec-title_dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <h2 class="sec-title_heading">Syllabus of this Course</h2>
+                <div class="sec-title_text">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa Aliquam in hendrerit urna.
+                    Pellentesque sit amet sapien fringilla, mattis l consectetur, ultrices mauris. Maecenas vitae mattis
+                    tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna Pellentesque
+                    commodo lacus at sodales sodales. Quisque sagitt condimentum.
+
+                </div>
+            </div>
+
+            <div class="project-detail_lists">
+                <div class="row clearfix">
+                    <!-- Column -->
+                    <div class="column col-lg-6 col-md-12 col-sm-12">
+                        <ul class="project-detail_list">
+                            {% for item in course.syllabuses.all %}
+                            <li class="my-1">{{item.title}}</li>
+                            <p class="m-2">{{item.description}}</p>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-detail_gallery">
+                <div class="row clearfix">
+                    <!-- Column -->
+                    <div class="column col-lg-6 col-md-12 col-sm-12">
+                        <div class="project-detail_image">
+                            <img src="{% static 'assets/images/resource/project-2.jpg' %}" alt="" />
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="column col-lg-6 col-md-12 col-sm-12">
+                        <div class="project-detail_image">
+                            <img src="{% static 'assets/images/resource/project-3.jpg' %}" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Sec Title -->
+            <div class="sec-title">
+                <div class="sec-title_title">
+                    Final Result
+                    <div class="sec-title_dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <h2 class="sec-title_heading">By the end of this course you will be able to:</h2>
+
+            </div>
+
+            <div class="project-detail_lists">
+                <div class="row clearfix">
+                    <!-- Column -->
+                    <div class="column col-lg-12 col-md-12 col-sm-12">
+                        <ul class="project-detail_list">
+                            {% for item in course.outcomes.all %}
+                            <li class="my-1">{{item.outcome}}</li>
+                            <br>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-2">
+            <!-- Sec Title -->
+            <div class="sec-title">
+                <div class="sec-title_title">
+                    Prerequisites
+                    <div class="sec-title_dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <h2 class="sec-title_heading">Before You Start its better to know</h2>
+            </div>
+
+            <div class="project-detail_lists">
+                <div class="row clearfix">
+                    <!-- Column -->
+                    <div class="column col-lg-12 col-md-12 col-sm-12">
+                        <ul class="project-detail_list">
+                            {% for item in course.requirements.all %}
+                            <li class="my-1">{{item.requirement}}</li>
+                            <br>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sec Title -->
+            <div class="sec-title no-marging">
+                <div class="sec-title_title">
+                    Final Result
+                    <div class="sec-title_dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <h2 class="sec-title_heading">Excellence in Our Certificate Final Results</h2>
+                <div class="sec-title_text mb-2">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa Aliquam in hendrerit urna.
+                    Pellentesque sit amet sapien fringilla, mattis l consectetur, ultrices mauris. Maecenas vitae mattis
+                    tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna Pellentesque
+                    commodo lacus at sodales sodales. Quisque sagitt condimentum. <br>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa Aliquam in hendrerit urna.
+                    Pellentesque sit amet sapien fringilla, mattis l consectetur, ultrices mauris. Maecenas vitae mattis
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<!-- End Gallery One -->
+
+{% include 'layout/partials/_footer2.html' %}
+{% endblock %}

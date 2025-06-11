@@ -1,0 +1,66 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %} {{page_title}} {% endblock %}
+
+{% block content %}
+{% include 'layout/partials/_pagetitle.html' %}
+<!-- News Four -->
+<section class="news-four">
+    <div class="auto-container">
+        <div class="row clearfix">
+            {% for course in courses %}
+            <!-- News Block -->
+            <div class="news-block_one col-lg-4 col-md-6 col-sm-12">
+                <div class="news-block_one-inner">
+                    <!-- Post Date -->
+                    <div class="news-block_one-date_outer">
+                        <div class="news-block_one-date">28/<span>06/2025</span></div>
+                    </div>
+                    <div class="news-block_one-image">
+                        <a href="{% url 'course' course.id %}">
+                            {% if course.thumbnail %}
+                            <img src="{{course.thumbnail.url}}" alt="" />
+                            {% else %}
+                            <img src="{% static 'assets/images/resource/news-1.jpg' %}" alt="" />
+                            {% endif %}
+                            {% if course.thumbnail %}
+                            <img src="{{course.thumbnail.url}}" alt="" />
+                            {% else %}
+                            <img src="{% static 'assets/images/resource/news-1.jpg' %}" alt="" />
+                            {% endif %}
+                        </a>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <ul class="news-block_one-meta">
+                            <li><span class="icon fa-regular fa-comments fa-fw"></span>03</li>
+                            <li><span class="icon fa-solid fa-user fa-fw"></span>Admin</li>
+                        </ul>
+                        <a class="news-block_one-arrow" href="{% url 'course' course.id %}">
+                            <img src="assets/images/icons/blog-arrow.svg" alt="" />
+                        </a>
+                    </div>
+                    <div class="news-block_one-content">
+                        <h3 class="news-block_one-title">
+                            <a href="{% url 'course' course.id %}">{{course.title}}</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Styled Pagination -->
+        <ul class="styled-pagination text-center">
+            <li class="prev"><a href="#"><i class="fa-solid fa-angle-left fa-fw"></i></a></li>
+            <li><a href="#" class="active">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li class="next"><a href="#"><i class="fa-solid fa-angle-right fa-fw"></i></a></li>
+        </ul>
+        <!-- End Styled Pagination -->
+
+    </div>
+</section>
+<!-- End News Four -->
+{% include 'layout/partials/_footer2.html' %}
+{% endblock %}

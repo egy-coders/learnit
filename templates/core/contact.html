@@ -1,0 +1,126 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %} {{page_title}} {% endblock %}
+
+{% block content %}
+{% include 'layout/partials/_pagetitle.html' %}
+<!-- Contact Two -->
+<section class="contact-two" id="contact">
+    <div class="contact-two_shadow"
+        style="background-image:url({% static 'assets/images/background/pattern-28.png' %})"></div>
+    <div class="auto-container">
+        <div class="inner-container">
+            <!-- Sec Title -->
+            <div class="sec-title centered">
+                <div class="sec-title_title">
+                    <div class="sec-title_dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    Keep In Touch
+                    <div class="sec-title_dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <h2 class="sec-title_heading">Get in touch with our <br> lovely team</h2>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form method="post" action="contact.html">
+                    <div class="row clearfix">
+
+                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                            <input type="text" name="username" placeholder="First Name" required>
+                        </div>
+
+                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                            <input type="text" name="lastname" placeholder="Last Name" required>
+                        </div>
+
+                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                            <input type="email" name="email" placeholder="Email address" required>
+                        </div>
+
+                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                            <input type="text" name="services" placeholder="Services" required>
+                        </div>
+
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                            <textarea class="" placeholder="Your Information Masage"></textarea>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <!-- Button Box -->
+                            <button type="submit" class="theme-btn btn-style-one">
+                                <span class="btn-wrap">
+                                    <span class="text-one">Submit now</span>
+                                    <span class="text-two">Submit now</span>
+                                </span>
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+            <div class="contact-info_box">
+                <div class="row clearfix">
+                    <!-- Column -->
+                    <div class="column col-lg-4 col-md-12 col-sm-12">
+                        <h3>Contact <br> Information</h3>
+                        <div class="contact-info_text">We’ve grown up with the internet revolution, <br> and we know how
+                            to deliver on its</div>
+                    </div>
+                    <!-- Column -->
+                    <div class="column col-lg-8 col-md-12 col-sm-12">
+                        <div class="row clearfix">
+
+                            <!-- Info Block -->
+                            <div class="contact-info_block col-lg-6 col-md-6 col-sm-12">
+                                <div class="contact-info_block-inner">
+                                    <div class="contact-info_block-icon">
+                                        <i class="fa-classic fa-solid fa-location-dot fa-fw"></i>
+                                    </div>
+                                    <h4>Location</h4>
+                                    <p>84th Elmerghani St., Heliopolis, Cairo.</p>
+                                </div>
+                            </div>
+
+                            <!-- Info Block -->
+                            <div class="contact-info_block col-lg-6 col-md-6 col-sm-12">
+                                <div class="contact-info_block-inner">
+                                    <div class="contact-info_block-icon">
+                                        <i class="fa-classic fa-solid fa-phone fa-fw"></i>
+                                    </div>
+                                    <h4>Phone</h4>
+                                    <p>+12 35 35783, +23 586 2254 <br> info@gmail.com, demo@item.com</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End Contact Two -->
+
+<!-- Map One -->
+<section class="map-one">
+    <div class="auto-container">
+        <iframe
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBoyx41RY9j0uxYImbXPWo_2eSC9IRGcjQ&q=Learn+It+Academy,Cairo+Egypt"
+            allowfullscreen=""></iframe>
+    </div>
+</section>
+<!-- End Map One -->
+
+{% include 'layout/partials/_footer2.html' %}
+
+{% endblock %}

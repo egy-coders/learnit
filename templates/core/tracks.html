@@ -1,0 +1,160 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %} {{page_title}} {% endblock %}
+
+{% block content %}
+{% include 'layout/partials/_pagetitle.html' %}
+<!-- Empower One -->
+<section class="empower-one style-two">
+    <div class="empower-shape-image"
+        style="background-image: url({% static 'assets/images/background/price-one_bg.png' %});"></div>
+    <div class="auto-container">
+        <!-- Sec Title -->
+        <div class="sec-title centered">
+            <div class="sec-title_title">
+                <div class="sec-title_dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                Empowering
+                <div class="sec-title_dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <h2 class="sec-title_heading">Your Business Growth Through <br> with IT Solutions.</h2>
+        </div>
+        <div class="clearfix">
+            {% for track in tracks %}
+            <!-- Empower Block One -->
+            <div class="empower-block_one my-4">
+                <div class="empower-block_one-inner">
+                    <div class="empower-block_one-image">
+                        <img src="{{track.image.url}}" alt="track_image" width="150" height="250"/>
+                        <div class="empower-block_one-icon">
+                            <img src="{% static 'assets/images/icons/service-1.svg' %}" alt="" />
+                        </div>
+                        <div class="empower-block_bg"
+                            style="background-image:url({% static 'assets/images/background/empower-bg.png' %})"></div>
+                    </div>
+                    <div class="empower-block_one-content">
+                        <h4 class="empower-block_one-title"><a href="{% url 'track' track.id %}">{{track.title}}</a></h4>
+                        <div class="empower-block_one-text">{{track.description|slice:70}}...</div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="lower-box text-center">
+            <div class="empower-block_one-text">We are web designers, developers, project managers, And digital
+                marketing professionals <br> dedicated to Creative and solutions using the latest trend.</div>
+            <!-- Button Box -->
+            <div class="empower-one_button">
+                <a href="{% url 'tracks' %}" class="theme-btn btn-style-one">
+                    <span class="btn-wrap">
+                        <span class="text-one">competitive</span>
+                        <span class="text-two">competitive</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- End Empower One -->
+
+<!-- Business One -->
+<section class="business-one">
+    <div class="business-one_vector"
+        style="background-image:url({% static 'assets/images/background/pattern-21.png' %})"></div>
+    <div class="business-one_vector-two"
+        style="background-image:url({% static 'assets/images/background/pattern-22.png' %})"></div>
+    <div class="auto-container">
+        <div class="row clearfix">
+
+            <!-- Video Column -->
+            <div class="business-one_video-column col-lg-6 col-md-12 col-sm-12">
+                <div class="business-one_video-outer">
+                    <div class="business-one_video-bg"></div>
+                    <a href="https://www.youtube.com/watch?v=kxPCFljwJws"
+                        class="business-one_play lightbox-video"><span><img
+                                src="{% static 'assets/images/icons/play.png' %}" alt="" /><i
+                                class="ripple"></i></span></a>
+                    <div class="business-one_video">
+                        <img src="{% static 'assets/images/resource/video.jpg' %}" alt="" />
+                    </div>
+                    <div class="business-one_video-content">
+                        <div>
+                            Digital Engagement
+                            <span>Watch Video</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Column -->
+            <div class="business-one_content-column col-lg-6 col-md-12 col-sm-12">
+                <div class="business-one_content-outer">
+                    <!-- Sec Title -->
+                    <div class="sec-title light">
+                        <div class="sec-title_title">
+                            <div class="sec-title_dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            What we offer
+                            <div class="sec-title_dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <h2 class="sec-title_heading">Small Smart Business <br> Grow Faster Now</h2>
+                        <div class="sec-title_text">IT consulting and software development services. We have helped
+                            non-IT organizations and companies</div>
+                    </div>
+
+                    <!-- Business One Content -->
+                    <div class="business-one_content">
+                        <div class="business-one_certified">
+                            <img src="{% static 'assets/images/icons/certified.png' %}" alt="" />
+                        </div>
+                        <ul class="business-one_list">
+                            <li>Solution We Provide For You</li>
+                            <li>Provide Finest Services</li>
+                            <li>Providing Information To A Client.</li>
+                            <li>Strategic Planning.</li>
+                        </ul>
+                    </div>
+                    <div class="news-one_button">
+                        <a href="blog.html" class="theme-btn btn-style-three">
+                            <span class="btn-wrap">
+                                <span class="text-one">Get Started</span>
+                                <span class="text-two">Get Started</span>
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End Business One -->
+
+{% include 'layout/partials/_program.html' %}
+
+{% include 'layout/partials/_team.html' %}
+
+{% include 'layout/partials/_incredible.html' %}
+
+{% include 'layout/partials/_experiance.html' %}
+
+{% include 'layout/partials/_client.html' %}
+
+{% endblock %}

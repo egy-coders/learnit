@@ -1,0 +1,229 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %} {{page_title}} {% endblock %}
+
+{% block content %}
+{% include 'layout/partials/_pagetitle.html' %}
+
+
+<!-- About Two -->
+<section class="about-two">
+    <div class="about-two_shadow" style="background-image:url({% static 'assets/images/background/pattern-13.png' %})">
+    </div>
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!-- Column -->
+            <div class="about-two_title-column col-lg-6 col-md-12 col-sm-12">
+                <div class="about-two_title-outer">
+                    <!-- Title Box -->
+                    <div class="sec-title_title">
+                        About Us
+                        <div class="sec-title_dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <h2 class="about-two_title">Quickly drive interoperable portals via <i>technology</i> economically
+                        sound <span>networks website solutions</span> redefine the orthogonal <strong>ITHUB.</strong>
+                    </h2>
+                    <div class="about-two_image-outer">
+                        <a href="https://www.youtube.com/watch?v=kxPCFljwJws"
+                            class="about-two_video lightbox-video"><span><img
+                                    src="{% static 'assets/images/icons/play.png' %}" alt="" /><i
+                                    class="ripple"></i></span></a>
+                        <div class="about-two_image">
+                            <img src="{% static 'assets/images/resource/about-4.jpg' %}" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="about-two_image-column col-lg-6 col-md-12 col-sm-12">
+                <div class="about-two_image-column_outer">
+                    <div class="about-two_image-two">
+                        <img src="{% static 'assets/images/resource/about-5.jpg' %}" alt="" />
+                    </div>
+                    <div class="about-two_text">We are web designers, developers, project managers, And digital
+                        marketing professionals dedicated developers, project managers, And digital marketing</div>
+                    <!-- Skills -->
+                    <div class="default-skills">
+
+                        <!-- Skill Item -->
+                        <div class="default-skill-item">
+                            <div class="default-skill-title">our capabilities</div>
+                            <div class="default-skill-bar">
+                                <div class="default-bar-inner">
+                                    <div class="default-bar progress-line" data-width="70">
+                                        <div class="default-skill-percentage"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="default-count-box count-box"><span class="count-text" data-speed="2000"
+                                    data-stop="70">0</span>%</div>
+                        </div>
+
+                        <!-- Skill Item -->
+                        <div class="default-skill-item">
+                            <div class="default-skill-title">our responsible</div>
+                            <div class="default-skill-bar">
+                                <div class="default-bar-inner">
+                                    <div class="default-bar progress-line" data-width="80">
+                                        <div class="default-skill-percentage"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="default-count-box count-box"><span class="count-text" data-speed="2000"
+                                    data-stop="80">0</span>%</div>
+                        </div>
+
+                    </div>
+
+                    <!-- Button Box -->
+                    <div class="about-two_button">
+                        <a href="{% url 'home' %}" class="theme-btn btn-style-three">
+                            <span class="btn-wrap">
+                                <span class="text-one">About More</span>
+                                <span class="text-two">About More</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About Two -->
+
+
+{% include 'layout/partials/_marketing.html' %}
+
+{% include 'layout/partials/_achieve.html' %}
+
+{% include 'layout/partials/_video.html' %}
+
+{% include 'layout/partials/_process.html' %}
+
+
+<!-- Offer Two -->
+<section class="offer-two alternate">
+    <div class="offer-two_bg" style="background-image:url({% static 'assets/images/background/offer-two_bg.png' %})">
+    </div>
+    <div class="auto-container">
+        <!-- Sec Title -->
+        <div class="sec-title light centered">
+            <div class="sec-title_title">
+                <div class="sec-title_dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                What we offer
+                <div class="sec-title_dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <h2 class="sec-title_heading">Help for you Overcome your <br> Technology Challenges</h2>
+        </div>
+
+        <div class="inner-container clearfix d-flex flex-wrap">
+
+            <!-- Offer Block One -->
+            <div class="offer-block_one">
+                <div class="offer-block_one-inner">
+                    <a class="offer-block_one-link" href="#"></a>
+                    <div class="offer-block_one-icon">
+                        <img src="{% static 'assets/images/icons/offer-5.svg' %}" alt="" />
+                    </div>
+                    <div class="offer-block_one-arrow">
+                        <img src="{% static 'assets/images/icons/offer-two_arrow.svg' %}" alt="" />
+                    </div>
+                    <h4 class="offer-block_one-title">Television</h4>
+                </div>
+            </div>
+
+            <!-- Offer Block One -->
+            <div class="offer-block_one">
+                <div class="offer-block_one-inner">
+                    <a class="offer-block_one-link" href="#"></a>
+                    <div class="offer-block_one-icon">
+                        <img src="{% static 'assets/images/icons/offer-6.svg' %}" alt="" />
+                    </div>
+                    <div class="offer-block_one-arrow">
+                        <img src="{% static 'assets/images/icons/offer-two_arrow.svg' %}" alt="" />
+                    </div>
+                    <h4 class="offer-block_one-title">IOT</h4>
+                </div>
+            </div>
+
+            <!-- Offer Block One -->
+            <div class="offer-block_one">
+                <div class="offer-block_one-inner">
+                    <a class="offer-block_one-link" href="#"></a>
+                    <div class="offer-block_one-icon">
+                        <img src="{% static 'assets/images/icons/offer-7.svg' %}" alt="" />
+                    </div>
+                    <div class="offer-block_one-arrow">
+                        <img src="{% static 'assets/images/icons/offer-two_arrow.svg' %}" alt="" />
+                    </div>
+                    <h4 class="offer-block_one-title">Android</h4>
+                </div>
+            </div>
+
+            <!-- Offer Block One -->
+            <div class="offer-block_one">
+                <div class="offer-block_one-inner">
+                    <a class="offer-block_one-link" href="#"></a>
+                    <div class="offer-block_one-icon">
+                        <img src="{% static 'assets/images/icons/offer-8.svg' %}" alt="" />
+                    </div>
+                    <div class="offer-block_one-arrow">
+                        <img src="{% static 'assets/images/icons/offer-two_arrow.svg' %}" alt="" />
+                    </div>
+                    <h4 class="offer-block_one-title">Website</h4>
+                </div>
+            </div>
+
+            <!-- Offer Block One -->
+            <div class="offer-block_one">
+                <div class="offer-block_one-inner">
+                    <a class="offer-block_one-link" href="#"></a>
+                    <div class="offer-block_one-icon">
+                        <img src="{% static 'assets/images/icons/offer-9.svg' %}" alt="" />
+                    </div>
+                    <div class="offer-block_one-arrow">
+                        <img src="{% static 'assets/images/icons/offer-two_arrow.svg' %}" alt="" />
+                    </div>
+                    <h4 class="offer-block_one-title">IOS</h4>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Button Box -->
+        <div class="step-two_button text-center">
+            <a href="{% url 'about' %}" class="theme-btn btn-style-two">
+                <span class="btn-wrap">
+                    <span class="text-one">Discover More</span>
+                    <span class="text-two">Discover More</span>
+                </span>
+            </a>
+        </div>
+
+    </div>
+</section>
+<!-- End Offer Two -->
+
+
+{% include 'layout/partials/_testmonials.html' %}
+
+{% include 'layout/partials/_team.html' %}
+
+{% include 'layout/partials/_incredible.html' %}
+
+{% include 'layout/partials/_experiance.html' %}
+
+
+{% endblock %}
