@@ -4,6 +4,7 @@
 
 {% block content %}
 {% include 'layout/partials/_pagetitle.html' %}
+
 <!-- Empower One -->
 <section class="empower-one style-two">
     <div class="empower-shape-image"
@@ -17,7 +18,7 @@
                     <span></span>
                     <span></span>
                 </div>
-                Empowering
+                LEARNIT Acadmy
                 <div class="sec-title_dots">
                     <span></span>
                     <span></span>
@@ -29,40 +30,45 @@
         <div class="clearfix">
             {% for track in tracks %}
             <!-- Empower Block One -->
-            <div class="empower-block_one my-4">
-                <div class="empower-block_one-inner">
-                    <div class="empower-block_one-image">
-                        <img src="{{track.image.url}}" alt="track_image" width="150" height="250"/>
-                        <div class="empower-block_one-icon">
-                            <img src="{% static 'assets/images/icons/service-1.svg' %}" alt="" />
+            {% if forloop.first or forloop.counter0|divisibleby:5 %}
+            <div class="empower-group mb-5 d-flex flex-wrap justify-content-center">
+                {% endif %}
+                <div class="empower-block_one my-4">
+                    <div class="empower-block_one-inner">
+                        <div class="empower-block_one-image">
+                            <img src="{{track.image.url}}" alt="track_image" width="150" height="250" />
+                            <div class="empower-block_one-icon">
+                                <img src="{% static 'assets/images/icons/service-1.svg'  %}" alt="" />
+                            </div>
+                            <div class="empower-block_bg"
+                                style="background-image:url({% static 'assets/images/background/empower-bg.png' %})">
+                            </div>
                         </div>
-                        <div class="empower-block_bg"
-                            style="background-image:url({% static 'assets/images/background/empower-bg.png' %})"></div>
-                    </div>
-                    <div class="empower-block_one-content">
-                        <h4 class="empower-block_one-title"><a href="{% url 'track' track.id %}">{{track.title}}</a></h4>
-                        <div class="empower-block_one-text">{{track.description|slice:70}}...</div>
+                        <div class="empower-block_one-content">
+                            <h4 class="empower-block_one-title"><a href="{% url 'track' track.id %}">{{track.title}}</a>
+                            </h4>
+                            <div class="empower-block_one-text">{{track.description|slice:70}}...</div>
+                        </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
 
-        <div class="lower-box text-center">
-            <div class="empower-block_one-text">We are web designers, developers, project managers, And digital
-                marketing professionals <br> dedicated to Creative and solutions using the latest trend.</div>
-            <!-- Button Box -->
-            <div class="empower-one_button">
-                <a href="{% url 'tracks' %}" class="theme-btn btn-style-one">
-                    <span class="btn-wrap">
-                        <span class="text-one">competitive</span>
-                        <span class="text-two">competitive</span>
-                    </span>
-                </a>
+            <div class="lower-box text-center">
+                <div class="empower-block_one-text">We are web designers, developers, project managers, And digital
+                    marketing professionals <br> dedicated to Creative and solutions using the latest trend.</div>
+                <!-- Button Box -->
+                <div class="empower-one_button">
+                    <a href="{% url 'tracks' %}" class="theme-btn btn-style-one">
+                        <span class="btn-wrap">
+                            <span class="text-one">competitive</span>
+                            <span class="text-two">competitive</span>
+                        </span>
+                    </a>
+                </div>
             </div>
-        </div>
 
-    </div>
+        </div>
 </section>
 <!-- End Empower One -->
 

@@ -143,6 +143,10 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+# Resize image before upload
+from PIL import Image
+from io import BytesIO
+from django.core.files import File
 
 # Course Model
 class Course(models.Model):
@@ -188,11 +192,34 @@ class Course(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    # Handle thumbnail image before save
+    def save(self, *args, **kwargs):
+        if self.thumbnail:
+            img = Image.open(self.thumbnail)
+
+            # Force resize (will stretch if needed)
+            img = img.resize((410, 378), Image.Resampling.LANCZOS)
+
+            # Convert RGBA to RGB to support JPEG
+            if img.mode in ("RGBA", "P"):
+                img = img.convert("RGB")
+
+            # Save resized image to BytesIO
+            thumb_io = BytesIO()
+            img_format = img.format or 'JPEG'  # Default to JPEG if format is None
+            img.save(thumb_io, format=img_format)
+
+            # Replace the file in the model
+            self.thumbnail.save(self.thumbnail.name, File(thumb_io), save=False)
+
+        super().save(*args, **kwargs)
+
+
+
     @property
     def average_rating(self):
         avg_rating = self.reviews.aggregate(avg_score=Avg('score'))['avg_score']
         return round(avg_rating, 1) if avg_rating else 0  # Round to 1 decimal place
-
 
     def discounted_price(self):
         """Calculate the price after discount."""

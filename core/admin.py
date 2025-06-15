@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.models import Group
 from django.core.cache import cache
 from django import forms
 from .models import *
@@ -69,22 +70,23 @@ admin.site.register(CourseSection)
 admin.site.register(CourseLesson)
 admin.site.register(Track)
 # admin.site.register(TrackGroup)
-admin.site.register(CourseGroup)
+# admin.site.register(CourseGroup) # Business Dashboard
 admin.site.register(TrackEnrollment)
-admin.site.register(Enrollment)
-admin.site.register(Payment)
-admin.site.register(Installment)
-admin.site.register(CourseReview)
-admin.site.register(TrackCertificate)
-admin.site.register(CourseRequirement)
-admin.site.register(Quiz)
-admin.site.register(QuizQuestion)
-admin.site.register(QuizAnswer)
-admin.site.register(QuizAttempt)
+# admin.site.register(Enrollment) # Business Dashboard - Course Enrollment
+# admin.site.register(Payment) # Business Dashboard
+# admin.site.register(Installment) # Business Dashboard
+# admin.site.register(CourseReview) # Business Dashboard
+# admin.site.register(TrackCertificate) # Business Dashboard
+admin.site.register(CourseRequirement) 
+# admin.site.register(Quiz) # Business Dashboard
+# admin.site.register(QuizQuestion) # Business Dashboard
+# admin.site.register(QuizAnswer) # Business Dashboard
+# admin.site.register(QuizAttempt) # Business Dashboard
 admin.site.register(Event)
 admin.site.register(EventImage)
 admin.site.register(CourseFAQ)
 admin.site.register(TrackFAQ)
-admin.site.register(Country)
-admin.site.register(Nationality)
-admin.site.register(City)
+# admin.site.register(Country) # Business Dashboard
+# admin.site.register(Nationality) # Business Dashboard
+# admin.site.register(City) # Business Dashboard
+admin.site.unregister(Group)
