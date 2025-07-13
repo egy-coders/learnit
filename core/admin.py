@@ -86,6 +86,8 @@ admin.site.register(Event)
 admin.site.register(EventImage)
 admin.site.register(CourseFAQ)
 admin.site.register(TrackFAQ)
+admin.site.register(TalentRequest)
+admin.site.register(Contact)
 # admin.site.register(Country) # Business Dashboard
 # admin.site.register(Nationality) # Business Dashboard
 # admin.site.register(City) # Business Dashboard

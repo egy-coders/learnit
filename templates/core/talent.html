@@ -1,0 +1,62 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %} {{ page_title }} {% endblock %}
+
+{% block content %}
+{% include 'layout/partials/_pagetitle.html' %}
+
+<section class="contact-form-section py-5">
+    <div class="auto-container">
+        <div class="sec-title text-center">
+            <div class="sec-title_title">Need Talents?</div>
+            <h2 class="sec-title_heading">Request Certified Trainees from Our Academy</h2>
+            <div class="sec-title_text">Please fill out the form below to get in touch with our placement team.</div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <form method="post" class="contact-form">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            {{ form.user_name.label_tag }} {{ form.user_name }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            {{ form.email.label_tag }} {{ form.email }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            {{ form.phone.label_tag }} {{ form.phone }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            {{ form.country.label_tag }} {{ form.country }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            {{ form.company_name.label_tag }} {{ form.company_name }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            {{ form.position.label_tag }} {{ form.position }}
+                        </div>
+                        <div class="form-group col-md-12">
+                            {{ form.job_description.label_tag }} {{ form.job_description }}
+                        </div>
+                        <div class="form-group col-md-12">
+                            {{ form.salary_range.label_tag }} {{ form.salary_range }}
+                        </div>
+                        <div class="form-group col-md-12 text-center">
+                            <button type="submit" class="theme-btn btn-style-one">
+                                <span class="btn-wrap">
+                                    <span class="text-one">Submit Request</span>
+                                    <span class="text-two">Submit Request</span>
+                                </span>
+                            </button>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'layout/partials/_footer2.html' %}
+{% endblock %}

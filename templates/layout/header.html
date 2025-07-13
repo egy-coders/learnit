@@ -27,10 +27,10 @@
                         <!-- Social Box -->
                         <div class="header-top_socials">
                             <div class="social-inner">
-                                <a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="https://dribbble.com/"><i class="fa-brands fa-dribbble"></i></a>
+                                <a target="_blank" href="https://www.facebook.com/Learnitacademyy"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a target="_blank" href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                <a target="_blank" href="https://www.linkedin.com/company/learnitacademyy/"><i class="fa-brands fa-linkedin"></i></a>
+                                <a target="_blank" href="https://wa.me/201090816894"><i class="fa-brands fa-whatsapp"></i></a>
                             </div>
                         </div>
 
@@ -104,8 +104,8 @@
                                             {% endfor %}
                                         </ul>
                                     </li>
-                                    <li class=""><a href="#">Corporate Training</a></li>
-                                    <li class=""><a href="#">Need Talents</a></li>
+                                    <li class=""><a href="{% url 'corporate' %}">Corporate Training</a></li>
+                                    <li class=""><a href="{% url 'need_talents' %}">Need Talents</a></li>
                                     <li class=""><a href="{% url 'about' %}">About</a></li>
                                     <li class=""><a href="{% url 'faqs' %}">FAQs</a></li>
                                     <li class=""><a href="{% url 'contact' %}">Contact</a></li>
@@ -113,7 +113,6 @@
                             </div>
                         </nav>
                     </div>
-
                     <!-- Main Menu End-->
                     <div class="outer-box d-flex align-items-center flex-wrap">
 
@@ -134,8 +133,8 @@
                         <div class="main-header_button">
                             <a href="{% url 'about' %}" class="theme-btn btn-style-one">
                                 <span class="btn-wrap">
-                                    <span class="text-one">Book Now</span>
-                                    <span class="text-two">Book Now</span>
+                                    <span class="text-one">Enroll Now</span>
+                                    <span class="text-two">Enroll Now</span>
                                 </span>
                             </a>
                         </div>
@@ -151,6 +150,18 @@
         </div>
     </div>
     <!--End Header Lower-->
+
+    <!-- Alert - notifications -->
+    {% if messages %}
+    <div class="container mt-3">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
 
     <!-- Mobile Menu  -->
     <div class="mobile-menu">

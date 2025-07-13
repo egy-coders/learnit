@@ -541,3 +541,30 @@ class TermsConditions(models.Model):
     title = models.CharField(max_length=255)
     info = models.TextField()
     order = models.PositiveIntegerField(default=1)
+
+class TalentRequest(models.Model):
+    user_name = models.CharField(max_length=150)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20)
+    country = models.ForeignKey('Country', on_delete=models.SET_NULL, null=True)  # Use your existing Country model
+    company_name = models.CharField(max_length=150)
+    position = models.CharField(max_length=100)
+    job_description = models.TextField()
+    salary_range = models.CharField(max_length=100, blank=True, null=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.company_name} - {self.position}"
+
+class Contact(models.Model):
+    username = models.CharField(max_length=150)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20)
+    company_name = models.CharField(max_length=150)
+    message = models.TextField()
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.username} - {self.company_name}"

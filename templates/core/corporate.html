@@ -1,0 +1,88 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %} {{page_title}} {% endblock %}
+
+{% block content %}
+{% include 'layout/partials/_pagetitle.html' %}
+
+<!-- Corporate Training Section -->
+<section class="corporate-training py-5">
+    <div class="auto-container">
+        <div class="sec-title text-center mb-5">
+            <div class="sec-title_title">Corporate Training</div>
+            <h2 class="sec-title_heading">Empower Your Team with Tailored Learning Solutions</h2>
+            <div class="sec-title_text">
+                We offer scalable training solutions to upskill your workforce and drive business performance.
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <h4 class="fw-bold mb-3">Why Choose Our Corporate Training?</h4>
+                <ul class="list-style-two" style="font-size: large;">
+                    <li><i class="fas fa-check-circle text-primary me-2"></i>Customized Learning Tracks aligned to your
+                        business needs</li>
+                    <li><i class="fas fa-chalkboard-teacher text-primary me-2"></i>Courses led by expert instructors and
+                        industry leaders</li>
+                    <li><i class="fas fa-chart-line text-primary me-2"></i>Real-time progress and performance reports
+                    </li>
+                    <li><i class="fas fa-calendar-alt text-primary me-2"></i>Flexible self-paced or live sessions</li>
+                    <li><i class="fas fa-certificate text-primary me-2"></i>Accredited Certificates of Completion</li>
+                    <li><i class="fas fa-credit-card text-primary me-2"></i>Centralized billing and group discounts</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <h4 class="fw-bold mb-3">Popular Training Tracks</h4>
+                <ul class="list-style-two" style="font-size: large;">
+                    <li><i class="fas fa-shield-alt text-primary me-2"></i>Cybersecurity Awareness</li>
+                    <li><i class="fas fa-laptop-code text-primary me-2"></i>Full-Stack Web Development</li>
+                    <li><i class="fas fa-cloud text-primary me-2"></i>Cloud & DevOps Essentials</li>
+                    <li><i class="fas fa-database text-primary me-2"></i>Data Analytics & AI</li>
+                    <li><i class="fas fa-users text-primary me-2"></i>Leadership & Communication Skills</li>
+                    <li><i class="fas fa-cogs text-primary me-2"></i>Custom Tracks (available upon request)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="{% url 'contact' %}" class="theme-btn btn-style-one">
+                <i class="fas fa-envelope me-2"></i>Request Corporate Training
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Faq Two -->
+<section class="faq-two">
+    <div class="auto-container">
+        <!-- Sec Title -->
+        <div class="sec-title">
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                <div class="left-box">
+                    <div class="sec-title_title">
+                        FAQ’s
+                        <div class="sec-title_dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <h2 class="sec-title_heading">Need Answer? <br> Find Them Here</h2>
+                </div>
+                <div class="right-box">
+                    <div class="sec-title_text">We’ve grown up with the internet revolution, and we <br> know how to
+                        deliver on its promise of improved business <br> efficiency. We work throughout the</div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <!-- Existing FAQ content -->
+            <!-- ... -->
+        </div>
+    </div>
+</section>
+
+{% include 'layout/partials/_testmonials.html' %}
+{% include 'layout/partials/_footer2.html' %}
+
+{% endblock %}

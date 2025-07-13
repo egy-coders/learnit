@@ -1,5 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib import messages
 from .models import *
+from .forms import *
 
 
 
@@ -63,3 +65,29 @@ def contact(request):
         'page_title' : 'Contact'
     }
     return render(request, 'core/contact.html', context)
+
+def corporate(request):
+    context = {
+        'page_title' : 'Corporate Trainig'
+    }
+    return render(request, 'core/corporate.html', context)
+
+
+def talent_request_view(request):
+    form = TalentRequestForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        messages.success(request, "Request submitted successfully, our team will contact you soon.")
+        return redirect('home')
+    return render(request, 'core/talent.html', {'form': form, 'page_title': 'Request Talents'})
+
+
+def contact(request):
+    form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Your message was submitted successfully. We will contact you soon.")
+            return redirect('home') 
+    return render(request, 'core/contact.html', {'form': form, 'page_title': 'Contact Us'})
